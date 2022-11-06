@@ -1,0 +1,13 @@
+[Unit]
+Description="Start chromium with magicmirror"
+
+
+[Service]
+Type=simple
+StandardOutput=journal
+ExecStart=%h/bin/start-chromium.sh
+Restart=always
+RuntimeMaxSec=1d
+
+[Install]
+WantedBy=default.target
